@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+@theme {
+  --color-cream-50: #fffdfa;
+  --color-cream-100: #f9f5f0;
+  --color-cream-200: #f3ece2;
+  --color-paper: #fffcf8;
+
+  --color-ink: #1a1a1a;
+  --color-ink-900: #1a1a1a;
+  --color-ink-700: #3a3a3a;
+  --color-ink-500: #7a736b;
+  --color-ink-300: #9a9188;
+  --color-ink-100: #d2ccc4;
+
+  --color-peach: #ff8a65;
+  --color-peach-light: #ff9e7d;
+  --color-peach-dark: #e66e4b;
+
+  --color-coral: #ffb5a7;
+  --color-mint: #b8e6d1;
+  --color-mint-light: #c8f0e0;
+  --color-mint-dark: #a0d2b9;
+
+  --color-butter: #ffe08c;
+  --color-butter-light: #fff0b8;
+
+  --color-lavender: #d4c1f5;
+  --color-lavender-light: #e3d4ff;
+
+  /* optional alias if you keep typing lavendar */
+  --color-lavendar: #d4c1f5;
+
+  --color-sky: #a8d8f0;
+  --color-sky-light: #c5e7f7;
+  --color-sage: #d1e7dd;
+
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-error: #c44444;
+  --color-info: #2196f3;
+
+  --color-border-base: #ede7e0;
+
+  --font-sans: "Inter", sans-serif;
+  --font-mono: monospace;
+
+  --radius-base: 16px;
+  --radius-lg: 26px;
+
+  --shadow-sm: 0 4px 12px rgba(26, 26, 26, 0.04);
+  --shadow-base: 0 12px 32px rgba(26, 26, 26, 0.06);
+  --shadow-md: 0 16px 40px rgba(26, 26, 26, 0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border-base;
+  }
+
+  body {
+    @apply bg-cream-100 text-ink;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-paper rounded-lg p-5;
+    box-shadow: var(--shadow-base);
+  }
+
+  .card-peach {
+    @apply bg-peach;
+  }
+
+  .card-mint {
+    @apply bg-mint;
+  }
+
+  .card-butter {
+    @apply bg-butter;
+  }
+
+  .card-sky {
+    @apply bg-sky;
+  }
+
+  .card-lavender {
+    @apply bg-lavender;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    @apply rounded-[18px] px-6 py-4 font-semibold text-[15px];
+  }
+
+  .btn-primary {
+    @apply bg-ink text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-ink;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .input {
+    @apply w-full px-4 py-3.5 rounded-base bg-white border border-border-base;
+  }
+}
