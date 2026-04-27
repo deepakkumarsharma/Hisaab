@@ -51,9 +51,8 @@ const TabLayout = () => {
             title,
             tabBarIcon: ({ focused, color, size }) => (
               <View
-                className={`border rounded-full p-2 ${
-                  focused ? "bg-black" : "border-transparent"
-                }`}
+                className="rounded-full p-2"
+                style={focused ? { backgroundColor: colors.black } : ""}
               >
                 <TabIcon
                   size={size / 1.2}

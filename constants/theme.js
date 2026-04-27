@@ -32,7 +32,6 @@ export const colors = {
     DEFAULT: "#d4c1f5",
     light: "#e3d4ff",
   },
-  lavendar: "#d4c1f5",
   sky: {
     DEFAULT: "#a8d8f0",
     light: "#c5e7f7",
