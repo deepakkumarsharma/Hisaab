@@ -1,11 +1,16 @@
-import { Text, View } from "react-native";
+import { useFloatingTabBarBottomPadding } from "@/constants/tabBar";
+import { styled } from "nativewind";
+import { Text } from "react-native";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+
+const SafeAreaView = styled(RNSafeAreaView);
 
 export default function Index() {
+  const paddingBottom = useFloatingTabBarBottomPadding();
+
   return (
-    <View className="bg-larvendar flex-1 p-spacing-5">
-      <View className="card-peach p-5  shadow-sm">
-        <Text className="text-ink font-bold text-xl">Hello NativeWind!</Text>
-      </View>
-    </View>
+    <SafeAreaView className="flex-1 p-2 bg-paper" style={{ paddingBottom }}>
+      <Text>Testing</Text>
+    </SafeAreaView>
   );
 }
